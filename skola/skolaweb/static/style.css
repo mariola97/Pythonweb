@@ -1,0 +1,12 @@
+body{
+    background-color: aquamarine;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.6rem;
+}
+.forma{
+border-radius: 20%;
+font-size: 15px;
+background-color: brown;
+position: relative;
+margin-left: 100px;
+}
