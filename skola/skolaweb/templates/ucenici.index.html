@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SkolaWeb - Popis ucenika</title>
+</head>
+<body>
+    <h1>Ucenici</h1>
+    <table>
+        <tr>
+            <th>Ime</th>
+            <th>Prezime</th>
+            <th>Datum rodjenja</th>
+        </tr>
+    {%for u indata%}
+    <tr>
+        <td>{{u.Ime}}</td>
+        <td>{{u.Prezime}}</td>
+        <td>{{u.DatumRodjenja}}</td>
+    </tr>
+    {%endfor%}
+</table>
+</body>
+</html>
