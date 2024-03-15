@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout 
 from .forms import UserCreationForm, LoginForm
 import time
-
+from skolaweb.models import *
 # Create your views here.
 def index(request):
     t=time.localtime()
@@ -42,3 +42,7 @@ def user_logout(request):
     logout(request)
     return redirect('login')
 
+def ucenici_index(request):
+    data=Ucenik.objects.all().order_by("Prezime")
+    podatci={'data':data}
+    return render(request,"ucenici_index.html",podatci)

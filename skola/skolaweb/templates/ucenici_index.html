@@ -5,13 +5,13 @@
 </head>
 <body>
     <h1>Ucenici</h1>
-    <table>
+    <table border=1>
         <tr>
             <th>Ime</th>
             <th>Prezime</th>
             <th>Datum rodjenja</th>
         </tr>
-    {%for u indata%}
+    {%for u in data%}
     <tr>
         <td>{{u.Ime}}</td>
         <td>{{u.Prezime}}</td>
