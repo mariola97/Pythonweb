@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout 
 from .forms import UserCreationForm, LoginForm
+from django.http import HttpResponseRedirect
 import time
 from skolaweb.models import *
+from skolaweb.forms import *
 # Create your views here.
 def index(request):
     t=time.localtime()
@@ -46,3 +48,6 @@ def ucenici_index(request):
     data=Ucenik.objects.all().order_by("Prezime")
     podatci={'data':data}
     return render(request,"ucenici_index.html",podatci)
+
+def ucenici_add(request):
+        return render(request, "ucenici_add.html")
