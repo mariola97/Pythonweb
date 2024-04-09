@@ -50,4 +50,5 @@ def ucenici_index(request):
     return render(request,"ucenici_index.html",podatci)
 
 def ucenici_add(request):
-        return render(request, "ucenici_add.html")
+        form=UcenikAdd()
+        return render(request, "ucenici_add.html", {'form':form})

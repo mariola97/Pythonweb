@@ -12,3 +12,8 @@ class SignupForm(UserCreationForm):
 class LoginForm(forms.Form):
     username = forms.CharField()
     password = forms.CharField(widget=forms.PasswordInput)
+
+class UcenikAdd(ModelForm):
+    class Meta:
+        model=Ucenik
+        fields='__all__'

@@ -5,6 +5,13 @@
 </head>
 <body>
     <p>Dodavanje ucenika</p>
+    <form method="post" action="">
+      <table>
+      <tr><td>{{form.as_table}}</td></tr>
+      {% csrf_token %}
+      <tr><td><input type="submit" value="Spremi"></td></tr>
+      </table>
+    </form>
 </body>
 </html>
   
